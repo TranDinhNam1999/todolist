@@ -1,0 +1,1 @@
+"use strict";var User=require("../services/users");module.exports=function(r,e,s){var u=r.session.userId;if(e.locals.currentUser=null,!u)return s();var n=User.findUserById(u);if(!n)return s();r.currentUser=n,e.locals.currentUser=n,s()};

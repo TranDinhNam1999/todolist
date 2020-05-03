@@ -1,0 +1,1 @@
+"use strict";var User=require("../services/users");module.exports=function(s,e){s.session.views=(s.session.views||0)+1,e.render("index",{views:s.session.views,user:s.currentUser})};

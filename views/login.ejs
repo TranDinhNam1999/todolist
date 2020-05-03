@@ -1,0 +1,10 @@
+<%- include('header', {title: 'Login', css: 'css/login.css', js: ''}); -%>
+    <div class="login">
+        <h1>Login</h1>
+        <form method="POST" action="">
+            <input type="email" name="email" id="email" placeholder="Username" required="required" />
+            <input type="password" name="password" id="password" placeholder="Password" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Login.</button>
+        </form>
+    </div>
+    <%- include('footer'); -%>

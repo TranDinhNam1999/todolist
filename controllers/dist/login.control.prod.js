@@ -1,0 +1,1 @@
+"use strict";var users=[{email:"tdnam.17ck1@gmail.com",displayName:"Dinh Nam",password:""}];function findUserByEmail(r){return users.find(function(i){return i.email===r})}function findUserById(i){return users[i]}module.exports={findUserByEmail:findUserByEmail,findUserById:findUserById};

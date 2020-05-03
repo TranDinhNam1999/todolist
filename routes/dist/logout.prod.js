@@ -1,0 +1,1 @@
+"use strict";module.exports=function(e,s){delete e.session.userId,s.redirect("/")};

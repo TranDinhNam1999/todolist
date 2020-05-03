@@ -1,0 +1,1 @@
+"use strict";var _require=require("express"),Router=_require.Router,upload=require("../middlewares/upload"),router=new Router;router.get("/",function(e,r){e.currentUser?r.render("profile"):r.redirect("/")}),router.post("/",upload.single("avatar"),function(e,r,o){console.log(e.file),r.render("profile")}),module.exports=router;

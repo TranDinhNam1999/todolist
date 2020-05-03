@@ -1,0 +1,1 @@
+"use strict";var multer=require("multer"),path=require("path"),upload=multer({dest:path.join(__dirname,"..","uploads")});module.exports=upload;

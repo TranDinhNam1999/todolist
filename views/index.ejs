@@ -1,0 +1,33 @@
+<%- include('header', {title: 'Home', css: 'css/index.css', js: 'js/home.js'}); -%>
+    <header>
+        <img src="images/logo.png" alt="logo" class="logo">
+        <nav class="nav_color">
+            <ul class="nav__links">
+                <li><a href="/">Home</a></li>
+                <li>
+                    <a href="<% if(currentUser){ %>/profile<% } else { %> /login <% } %>">
+                        <%= currentUser ? 'Profile' : 'Login' %>
+                    </a>
+                </li>
+                <li>
+                    <a href="<% if(currentUser){ %>/logout<% } else { %> / <% } %>" id="check">
+                        <%= currentUser ? 'Log Out' : '' %>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="<% if(currentUser){ %>/todo<% } else { %> / <% } %>" class="cta"><button onclick="check_login()">To do</button></a>
+    </header>
+    <div class="div_todo">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71Ha47WVySL._AC_SL1500_.jpg" alt="todo" class="todo">
+        <div class="centered"><a href="<% if(currentUser){ %>/todo<% } else { %> / <% } %>"><button class="btn-todo" onclick="check_login()">To do</button></a></div>
+    </div>
+    <script>
+        function check_login() {
+            var a = document.getElementsByTagName('LI');
+            if (a[1].innerText !== "Profile") {
+                alert('Bạn chưa Đăng nhập');
+            }
+        }
+    </script>
+    <%- include('footer'); -%>
